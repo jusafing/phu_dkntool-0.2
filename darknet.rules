@@ -1,0 +1,35 @@
+############################################################################
+############################################################################
+# DKN ProcessTool v0.1b
+# National Autonomous University of Mexico
+# UNAM-CERT / Honeynet Project - UNAM Chapter / Proyecto Honeynet UNAM
+# By Javier Santillan <jusafing@gmail.com> 2009-2010
+# www.seguridad.unam.mx/www.cert.org.mx/www.honeynet.unam.mx/www.jusanet.org
+# 
+# This file is free software; as a special exception the author gives
+# unlimited permission to copy and/or distribute it, with or without
+# modifications, as long as this notice is preserved.
+# 
+# This program is distributed in the hope that it will be useful, but
+# WITHOUT ANY WARRANTY, to the extent permitted by law; without even the
+# implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+# 
+# dkn_rules.conf
+# DKN ProcessTool - Rules file for honeytrap module.
+############################################################################
+############################################################################
+
+# DESCRIPTION | PROTO | DPORT | STRING-PATTERNS | MAX TIME EVENT (SEG)
+
+SSH SCAN O POSIBLE SSH BRUTEFORCE ATTACK|TCP|22|-|300
+SQL WORM 1433|TCP|1433|-|300
+SQL WORM 1434|TCP|1434|-|300
+SQL WORM 1434|UDP|1434|-|300
+IRC CHAT-POSIBLE BOT|TCP|6666|PING|300
+IRC CHAT-POSIBLE BOT|TCP|6667|PONG|300
+IRC CHAT-POSIBLE BOT|TCP|6668|-|300
+IRC CHAT-POSIBLE BOT|TCP|6669|-|300
+POSIBLE SPAM|TCP|25|-|300
+POSIBLE VNC SCAN|TCP|5900|-|300
+POSIBLE NETBIOS SCAN|TCP|139|-|300
+POSIBLE WORM MS-DS 445|TCP|445|-|300
