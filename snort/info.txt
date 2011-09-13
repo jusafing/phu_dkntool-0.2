@@ -1,0 +1,1 @@
+Snort LOG directory for SNmod
